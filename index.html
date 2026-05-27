@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Poco Poco Kids | 子供向けECサイトデモ</title>
+  <meta name="description" content="子供向け商品を想定した独自ECサイトの静的レビュー用デモです。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="demo-strip">
+    <strong>DEMO</strong>
+    <span>GitHub Pages確認用です。注文保存・メール送信・決済は行われません。</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Poco Poco Kids">
+      <span class="brand-mark">P</span>
+      <span>
+        <strong>Poco Poco Kids</strong>
+        <small>kids & family select</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="メインメニュー">
+      <a href="#catalog">商品</a>
+      <a href="#features">できること</a>
+      <a href="#checkout">注文体験</a>
+      <a href="#admin">管理画面</a>
+    </nav>
+    <button class="cart-button" type="button" data-open-cart>
+      カート <span data-cart-count>0</span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Sample EC for Kids Products</p>
+        <h1>かわいく、選びやすく、安心して買える子供向けEC。</h1>
+        <p class="lead">玩具、知育用品、子供雑貨、ギフトセットなどに使いやすい雰囲気で、商品登録から注文導線までの見え方を確認できます。</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="#catalog">商品を見る</a>
+          <button class="secondary-link" type="button" data-feature-add>おすすめをカートへ</button>
+        </div>
+        <div class="trust-row" aria-label="サイトの特徴">
+          <span>スマホ対応</span>
+          <span>ギフト導線</span>
+          <span>注文フォーム</span>
+          <span>管理画面</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="assets/images/kids-hero.png" alt="明るい子供部屋に並ぶ子供向け商品のイメージ">
+      </div>
+    </section>
+
+    <section class="category-band" aria-label="カテゴリ">
+      <button class="category-card active" type="button" data-category="all">
+        <span>All</span><strong>すべて</strong>
+      </button>
+      <button class="category-card" type="button" data-category="toys">
+        <span>Toys</span><strong>あそび</strong>
+      </button>
+      <button class="category-card" type="button" data-category="learning">
+        <span>Learning</span><strong>まなび</strong>
+      </button>
+      <button class="category-card" type="button" data-category="gifts">
+        <span>Gift</span><strong>ギフト</strong>
+      </button>
+      <button class="category-card" type="button" data-category="care">
+        <span>Care</span><strong>くらし</strong>
+      </button>
+    </section>
+
+    <section class="catalog-section" id="catalog">
+      <div class="section-heading">
+        <p class="eyebrow">Catalog</p>
+        <h2>サンプル商品</h2>
+        <p>商材が変わっても、カテゴリ・商品画像・説明文・色味を差し替えて使える構成です。</p>
+      </div>
+
+      <div class="catalog-tools">
+        <label class="search-field">
+          <span>商品検索</span>
+          <input type="search" placeholder="例: ギフト、積み木、通園" data-search>
+        </label>
+        <label class="sort-field">
+          <span>並び替え</span>
+          <select data-sort>
+            <option value="recommended">おすすめ順</option>
+            <option value="priceLow">価格が低い順</option>
+            <option value="priceHigh">価格が高い順</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="shop-layout">
+        <div class="product-grid" data-product-grid></div>
+        <aside class="cart-summary">
+          <div class="sticky-panel">
+            <p class="kicker">Cart</p>
+            <h3>現在のカート</h3>
+            <div class="mini-cart" data-mini-cart>
+              <p class="empty-note">商品を追加すると、ここに内容が表示されます。</p>
+            </div>
+            <div class="summary-line">
+              <span>小計</span>
+              <strong data-cart-subtotal>￥0</strong>
+            </div>
+            <button class="primary-button full" type="button" data-open-cart>注文フォームを見る</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="feature-section" id="features">
+      <div class="section-heading compact">
+        <p class="eyebrow">MVP Features</p>
+        <h2>見せられる機能</h2>
+        <p>決済連携を除き、ECとして必要になる基本導線を先に確認できます。</p>
+      </div>
+      <div class="feature-grid">
+        <article><span>01</span><h3>商品登録</h3><p>商品名、価格、画像、カテゴリ、公開状態を管理できます。</p></article>
+        <article><span>02</span><h3>カート</h3><p>数量変更、削除、小計表示、注文フォームへの遷移を確認できます。</p></article>
+        <article><span>03</span><h3>注文保存</h3><p>XServer版ではJSONに注文を保存し、管理画面に表示します。</p></article>
+        <article><span>04</span><h3>注文メール</h3><p>XServer版では店舗宛てだけに注文通知メールを送信します。</p></article>
+      </div>
+    </section>
+
+    <section class="checkout-section" id="checkout">
+      <div class="section-heading compact">
+        <p class="eyebrow">Checkout</p>
+        <h2>注文フォームの見え方</h2>
+        <p>レビュー版では保存・送信せず、実運用版で店舗宛てメール送信まで行います。</p>
+      </div>
+      <div class="checkout-preview">
+        <form class="mock-form">
+          <label>お名前<input type="text" value="山田 花子" readonly></label>
+          <label>メールアドレス<input type="email" value="sample@example.jp" readonly></label>
+          <label>お届け先<input type="text" value="東京都サンプル区1-2-3" readonly></label>
+          <label>支払い方法<select disabled><option>銀行振込</option><option>請求書払い</option><option>代金引換</option></select></label>
+        </form>
+        <div class="mock-receipt">
+          <p class="kicker">Preview</p>
+          <h3>注文確認</h3>
+          <div data-receipt-lines></div>
+          <div class="summary-line total">
+            <span>合計</span>
+            <strong data-receipt-total>￥0</strong>
+          </div>
+          <button class="primary-button" type="button" data-demo-complete>デモ注文を完了</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="admin-section" id="admin">
+      <div class="section-heading compact">
+        <p class="eyebrow">Back Office</p>
+        <h2>管理画面イメージ</h2>
+        <p>実運用版では、商品編集、注文一覧、注文ステータス変更、基本設定変更に対応します。</p>
+      </div>
+      <div class="admin-shell">
+        <div class="admin-sidebar">
+          <strong>Poco Admin</strong>
+          <button class="admin-tab active" type="button" data-admin-tab="orders">受注</button>
+          <button class="admin-tab" type="button" data-admin-tab="products">商品</button>
+          <button class="admin-tab" type="button" data-admin-tab="settings">設定</button>
+        </div>
+        <div class="admin-main">
+          <div class="metric-row">
+            <div><span>本日注文</span><strong>8件</strong></div>
+            <div><span>発送待ち</span><strong>5件</strong></div>
+            <div><span>公開商品</span><strong>12点</strong></div>
+          </div>
+          <div class="admin-panel active" data-admin-panel="orders">
+            <table>
+              <thead><tr><th>注文番号</th><th>お客様</th><th>金額</th><th>状態</th></tr></thead>
+              <tbody>
+                <tr><td>PK-1024</td><td>山田 花子</td><td>￥8,900</td><td><span class="status paid">受付済</span></td></tr>
+                <tr><td>PK-1023</td><td>青葉保育園</td><td>￥24,600</td><td><span class="status ship">発送準備</span></td></tr>
+                <tr><td>PK-1022</td><td>佐藤 美咲</td><td>￥5,400</td><td><span class="status quote">確認中</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="admin-panel" data-admin-panel="products">
+            <table>
+              <thead><tr><th>商品名</th><th>カテゴリ</th><th>在庫</th><th>公開</th></tr></thead>
+              <tbody data-admin-products></tbody>
+            </table>
+          </div>
+          <div class="admin-panel" data-admin-panel="settings">
+            <div class="settings-list">
+              <div><strong>店舗メール</strong><span>注文通知の送信先を設定</span></div>
+              <div><strong>テーマ</strong><span>商材に合わせて色と画像を変更</span></div>
+              <div><strong>特商法・規約</strong><span>公開前に正式情報へ差し替え</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="drawer-backdrop" data-cart-drawer aria-hidden="true">
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="カート">
+      <div class="drawer-header">
+        <strong>カート</strong>
+        <button type="button" class="modal-close" data-close-cart>閉じる</button>
+      </div>
+      <div class="drawer-items" data-drawer-items></div>
+      <div class="summary-line total">
+        <span>小計</span>
+        <strong data-drawer-subtotal>￥0</strong>
+      </div>
+      <div class="drawer-form">
+        <label>お名前<input type="text" placeholder="山田 花子"></label>
+        <label>メール<input type="email" placeholder="sample@example.jp"></label>
+        <label>お支払い<select><option>銀行振込</option><option>請求書払い</option><option>代金引換</option></select></label>
+        <button class="primary-button full" type="button" data-demo-complete>デモ注文を完了</button>
+      </div>
+    </aside>
+  </div>
+
+  <div class="product-modal-backdrop" data-product-modal aria-hidden="true">
+    <div class="product-modal" role="dialog" aria-modal="true" aria-label="商品詳細">
+      <button type="button" class="modal-close" data-close-modal>閉じる</button>
+      <div data-modal-content></div>
+    </div>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
